@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <title>Awesome Telegram Bot</title>
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">
+        <img src="assets/img/telegram.png" width="30" height="30" class="d-inline-block align-top" alt="Telegram Icon"> Awesome Telegram Bot</a>
+      </nav>
+</head>
+<style media="screen">
+  div{
+    padding-left: 10px;
+    margin-right: 10px;
+    border: 2px;
+    border-color: white;
+  }
+</style>
+<body>
+  <br>
+    <div id="myData"></div>
+    <script>
+        fetch('data.json')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                appendData(data);
+            })
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
+        function appendData(data) {
+            var mainContainer = document.getElementById("myData");
+            for (var i = 0; i < data.length; i++) {
+                var div = document.createElement("div");
+                div.innerHTML = `<div class="card text-white bg-dark mb-3" style="width: 100%; float:left"><div class="card-body"><h5 class="card-title">${data[i].botName}</h5><p class="card-text">${data[i].description}</p><a href=${"https://t.me/"+data[i].botUserName} class="btn btn-primary">Go To Bot</a></div><div class="card-footer"><small class="text-muted">Added by <a href=${"https://github.com/"+data[i].contributor}>${data[i].contributor}</a></small></div></div>`
+                mainContainer.appendChild(div);
+            }
+        }
+    </script>
+</body>
+<!-- Footer -->
+<footer class="page-footer font-small special-color-dark pt-4">
+  <div class="footer-copyright text-center py-3">No Fucking Rights Reserved. <a href="#">Contribute.</a>
+  </div>
+</footer>
+<!-- Footer -->
+</html>

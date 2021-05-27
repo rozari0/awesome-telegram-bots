@@ -1,0 +1,23 @@
+[
+    {
+        "id": "1",
+        "botName":"William ✨",
+        "botUserName": "WilliamButcherBot",
+        "description": "I can manage your group with lots of useful featuresSupport Chat: @WBBSupport",
+        "contributor" : "rozar0"
+    },
+    {
+        "id": "2",
+        "botName":"SangMata Info Bot",
+        "botUserName": "SangMataInfo_bot",
+        "description": "The SangMata Agent.",
+        "contributor" : ""
+    },
+    {
+        "id": "3",
+        "botName":"Torrent Searcher",
+        "botUserName": "magnetfinder_bot",
+        "description": "A bot that can search torrent for you.",
+        "contributor" : ""
+    }
+]
