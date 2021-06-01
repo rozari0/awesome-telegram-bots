@@ -19,5 +19,12 @@
         "botUserName": "magnetfinder_bot",
         "description": "A bot that can search torrent for you.",
         "contributor" : ""
+    },
+    {
+        "id": "3",
+        "botName":"QuotLy",
+        "botUserName": "QuotLyBot",
+        "description": "This bot will help you to crate sticker from a message.",
+        "contributor" : "rozari0"
     }
 ]
